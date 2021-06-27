@@ -29,58 +29,78 @@ public class Rotation : MonoBehaviour
         x_cam = myVector.x;
         y_cam = myVector.y;
         z_cam = myVector.z;
-            if ((x_cam * y_cam >= 0) && (x_cam * z_cam >= 0) && (y_cam * z_cam >= 0)){ 
+        if (x_cam == 0)
+        {
+            angle3 = 0;
+            angle2 = 0;
+            angle1 = (float)Math.Atan2(z_cam, y_cam) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.Euler(new Vector3(angle1, angle2, angle3));
+        }
+        if (y_cam == 0)
+        {
+            angle3 = (float)Math.Atan2(y_cam, x_cam) * Mathf.Rad2Deg;
+            angle2 = -(float)Math.Atan2(z_cam, x_cam) * Mathf.Rad2Deg;
+            angle1 = 0;
+            transform.rotation = Quaternion.Euler(new Vector3(angle1, angle2, angle3));
+        }
+        else if (x_cam*y_cam!=0)
+        {
+            if ((x_cam * y_cam >= 0) && (x_cam * z_cam >= 0) && (y_cam * z_cam >= 0))
+            {
                 angle3 = (float)Math.Atan2(y_cam, x_cam) * Mathf.Rad2Deg;
-                angle2 = (float)Math.Atan2(z_cam, x_cam) * Mathf.Rad2Deg;
+                angle2 = -(float)Math.Atan2(z_cam, x_cam) * Mathf.Rad2Deg;
                 angle1 = (float)Math.Atan2(z_cam, y_cam) * Mathf.Rad2Deg;
                 transform.rotation = Quaternion.Euler(new Vector3(angle1, angle2, angle3));
             }
-            if ((x_cam * y_cam >= 0) &&(x_cam * z_cam >= 0) && (y_cam * z_cam <= 0)){
+            if ((x_cam * y_cam >= 0) && (x_cam * z_cam >= 0) && (y_cam * z_cam <= 0))
+            {
                 angle3 = (float)Math.Atan2(y_cam, x_cam) * Mathf.Rad2Deg;
-                angle2 = (float)Math.Atan2(z_cam, x_cam) * Mathf.Rad2Deg;
+                angle2 = -(float)Math.Atan2(z_cam, x_cam) * Mathf.Rad2Deg;
                 angle1 = -(float)Math.Atan2(z_cam, y_cam) * Mathf.Rad2Deg;
                 transform.rotation = Quaternion.Euler(new Vector3(angle1, angle2, angle3));
             }
-            if ((x_cam * y_cam >= 0) &&(x_cam * z_cam <= 0) && (y_cam * z_cam >= 0)) {
+            if ((x_cam * y_cam >= 0) && (x_cam * z_cam <= 0) && (y_cam * z_cam >= 0))
+            {
                 angle3 = (float)Math.Atan2(y_cam, x_cam) * Mathf.Rad2Deg;
                 angle2 = -(float)Math.Atan2(z_cam, x_cam) * Mathf.Rad2Deg;
                 angle1 = (float)Math.Atan2(z_cam, y_cam) * Mathf.Rad2Deg;
                 transform.rotation = Quaternion.Euler(new Vector3(angle1, angle2, angle3));
             }
-            if ((x_cam * y_cam >= 0) &&(x_cam * z_cam <= 0) && (y_cam * z_cam <= 0))
+            if ((x_cam * y_cam >= 0) && (x_cam * z_cam <= 0) && (y_cam * z_cam <= 0))
             {
                 angle3 = (float)Math.Atan2(y_cam, x_cam) * Mathf.Rad2Deg;
                 angle2 = -(float)Math.Atan2(z_cam, x_cam) * Mathf.Rad2Deg;
                 angle1 = -(float)Math.Atan2(z_cam, y_cam) * Mathf.Rad2Deg;
                 transform.rotation = Quaternion.Euler(new Vector3(angle1, angle2, angle3));
             }
-            if ((x_cam * y_cam <= 0) &&(x_cam * z_cam >= 0) && (y_cam * z_cam >= 0))
-            {
-                angle3 = -(float)Math.Atan2(y_cam, x_cam) * Mathf.Rad2Deg;
-                angle2 = (float)Math.Atan2(z_cam, x_cam) * Mathf.Rad2Deg;
-                angle1 = (float)Math.Atan2(z_cam, y_cam) * Mathf.Rad2Deg;
-                transform.rotation = Quaternion.Euler(new Vector3(angle1, angle2, angle3));
-            }
-            if ((x_cam * y_cam <= 0) &&(x_cam * z_cam >= 0) && (y_cam * z_cam <= 0))
-            {
-                angle3 = -(float)Math.Atan2(y_cam, x_cam) * Mathf.Rad2Deg;
-                angle2 = (float)Math.Atan2(z_cam, x_cam) * Mathf.Rad2Deg;
-                angle1 = -(float)Math.Atan2(z_cam, y_cam) * Mathf.Rad2Deg;
-                transform.rotation = Quaternion.Euler(new Vector3(angle1, angle2, angle3));
-            }
-            if ((x_cam * y_cam <= 0) &&(x_cam * z_cam <= 0) && (y_cam * z_cam >= 0))
+            if ((x_cam * y_cam <= 0) && (x_cam * z_cam >= 0) && (y_cam * z_cam >= 0))
             {
                 angle3 = -(float)Math.Atan2(y_cam, x_cam) * Mathf.Rad2Deg;
                 angle2 = -(float)Math.Atan2(z_cam, x_cam) * Mathf.Rad2Deg;
                 angle1 = (float)Math.Atan2(z_cam, y_cam) * Mathf.Rad2Deg;
                 transform.rotation = Quaternion.Euler(new Vector3(angle1, angle2, angle3));
             }
-            if ((x_cam * y_cam <= 0) &&(x_cam * z_cam <= 0) && (y_cam * z_cam <= 0))
+            if ((x_cam * y_cam <= 0) && (x_cam * z_cam >= 0) && (y_cam * z_cam <= 0))
             {
                 angle3 = -(float)Math.Atan2(y_cam, x_cam) * Mathf.Rad2Deg;
                 angle2 = -(float)Math.Atan2(z_cam, x_cam) * Mathf.Rad2Deg;
                 angle1 = -(float)Math.Atan2(z_cam, y_cam) * Mathf.Rad2Deg;
                 transform.rotation = Quaternion.Euler(new Vector3(angle1, angle2, angle3));
+            }
+            if ((x_cam * y_cam <= 0) && (x_cam * z_cam <= 0) && (y_cam * z_cam >= 0))
+            {
+                angle3 = -(float)Math.Atan2(y_cam, x_cam) * Mathf.Rad2Deg;
+                angle2 = -(float)Math.Atan2(z_cam, x_cam) * Mathf.Rad2Deg;
+                angle1 = (float)Math.Atan2(z_cam, y_cam) * Mathf.Rad2Deg;
+                transform.rotation = Quaternion.Euler(new Vector3(angle1, angle2, angle3));
+            }
+            if ((x_cam * y_cam <= 0) && (x_cam * z_cam <= 0) && (y_cam * z_cam <= 0))
+            {
+                angle3 = -(float)Math.Atan2(y_cam, x_cam) * Mathf.Rad2Deg;
+                angle2 = -(float)Math.Atan2(z_cam, x_cam) * Mathf.Rad2Deg;
+                angle1 = -(float)Math.Atan2(z_cam, y_cam) * Mathf.Rad2Deg;
+                transform.rotation = Quaternion.Euler(new Vector3(angle1, angle2, angle3));
+            }
         }
     }
 }

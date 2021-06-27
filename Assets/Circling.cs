@@ -23,8 +23,8 @@ public class Circling : MonoBehaviour
     {
         angle += speed * Time.deltaTime; //if you want to switch direction, use -= instead of +=
         x = Mathf.Cos(angle) * radius;
-        y = 0;
         z = Mathf.Sin(angle) * radius;
+        y = 1;
         transform.position = new Vector3(x, y, z);
     }
 }
