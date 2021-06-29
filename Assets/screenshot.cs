@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class screenshot : MonoBehaviour
 {
-	[SerializeField]
-	GameObject blink;
 
 	public void TakeAShot()
 	{
@@ -19,7 +17,6 @@ public class screenshot : MonoBehaviour
 		string pathToSave = fileName;
 		ScreenCapture.CaptureScreenshot(pathToSave);
 		yield return new WaitForEndOfFrame();
-		Instantiate(blink, new Vector2(0f, 0f), Quaternion.identity);
 	}
 
 }
