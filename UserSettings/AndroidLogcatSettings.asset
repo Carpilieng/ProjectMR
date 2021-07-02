@@ -1,13 +1,32 @@
 {
-    "m_SelectedDeviceId": "",
+    "m_SelectedDeviceId": "UBV7N18A17005803",
     "m_SelectedPackage": {
-        "deviceId": "",
-        "name": "",
-        "processId": 0,
+        "deviceId": "UBV7N18A17005803",
+        "name": "com.CarpiNRJ.ProjectMR",
+        "processId": 2845,
         "exited": false
     },
     "m_SelectedPriority": 0,
-    "m_KnownPackagesForSerialization": [],
+    "m_KnownPackagesForSerialization": [
+        {
+            "deviceId": "UBV7N18A17005803",
+            "name": "com.CarpiNRJ.ProjectMR",
+            "processId": 30606,
+            "exited": false
+        },
+        {
+            "deviceId": "UBV7N18A17005803",
+            "name": "com.CarpiNRJ.ProjectMR",
+            "processId": 505,
+            "exited": false
+        },
+        {
+            "deviceId": "UBV7N18A17005803",
+            "name": "com.CarpiNRJ.ProjectMR",
+            "processId": 2845,
+            "exited": false
+        }
+    ],
     "m_Tags": {
         "m_Entries": [
             {
@@ -41,9 +60,20 @@
         ]
     },
     "m_MemoryViewerState": {
-        "MemoryWindowHeight": 0.0,
-        "MemoryWindowWidth": 0.0,
-        "MemoryTypeEnabled": [],
+        "MemoryWindowHeight": 300.0,
+        "MemoryWindowWidth": 170.0,
+        "MemoryTypeEnabled": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
         "MemoryGroup": 2,
         "Behavior": 0
     },

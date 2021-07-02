@@ -15,11 +15,9 @@ public class ScreenshotPreview : MonoBehaviour
 	// Use this for initialization
 	void Start()
 	{
-		Debug.Log("Galerie");
 		files = Directory.GetFiles(Application.persistentDataPath + "/", "*.png");
 		if (files.Length > 0)
 		{
-			Debug.Log(files.Length);
 			GetPictureAndShowIt();
 		}
 	}
